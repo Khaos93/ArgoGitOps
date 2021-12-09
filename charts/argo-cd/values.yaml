@@ -31,4 +31,5 @@ argo-cd:
       url: https://<argocd_server>/argo-cd      
   configs:
     secret:         
-      oidc.azure.clientSecret: dummy
+      oidc.azure.clientSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
+      gitlabSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
