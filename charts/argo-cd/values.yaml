@@ -30,8 +30,9 @@ argo-cd:
             - email
       url: https://<argocd_server>/argo-cd      
   configs:
-    secret:         
-      oidc:
-        azure:
-          clientSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
+    secret:
+      extra:         
+        oidc:
+          azure:
+            clientSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
       gitlabSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
