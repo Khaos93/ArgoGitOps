@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-cd
+  namespace: default
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  source:
+    path: charts/argo-cd
+    repoURL: https://github.com/Khaos93/ArgoGitOps.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+data:
+   oidc.config: |
+       name: AzureAD
+       issuer: https://login.microsoftonline.com/TENANT_ID/v2.0
+       clientID: CLIENT_ID
+       clientSecret: $oidc.azuread.clientSecret
+       requestedIDTokenClaims:
+         groups:
+           essential: true
+       requestedScopes:
+         - openid
+         - profile
+         - email
