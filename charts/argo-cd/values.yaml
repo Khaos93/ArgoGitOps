@@ -32,7 +32,5 @@ argo-cd:
   configs:
     secret:
       extra:         
-        oidc:
-          azure:
-            clientSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
+        oidc.azure.clientSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
       gitlabSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
