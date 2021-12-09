@@ -31,7 +31,7 @@ argo-cd:
       url: https://<argocd_server>/argo-cd
     rbacConfig: 
       policy.csv: |
-        g, <your_azure_ad_group_id>, role:admin
+        g, 1234567abcd, role:admin
   configs:
     secret:
       extra:         
