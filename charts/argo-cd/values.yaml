@@ -1,0 +1,31 @@
+argo-cd:
+  installCRDs: false
+  global:
+    image:
+      tag: v1.8.1
+  dex:
+    enabled: false
+  server:
+    extraArgs:
+      - --insecure
+    config:
+      repositories: |
+        - type: helm
+          name: stable
+          url: https://charts.helm.sh/stable
+        - type: helm
+          name: argo-cd
+          url: https://argoproj.github.io/argo-helm
+      oidc.config: |
+          name: Azure
+          issuer: https://login.microsoftonline.com/123456/v2.0
+          clientID: 123
+          clientSecret: 123
+          requestedIDTokenClaims:
+            groups:
+              essential: true
+          requestedScopes:
+            - openid
+            - profile
+            - email
+      url: https://<argocd_server>/argo-cd      
