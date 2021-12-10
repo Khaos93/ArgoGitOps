@@ -18,7 +18,7 @@ argo-cd:
           url: https://argoproj.github.io/argo-helm
       oidc.config: |
           name: Azure
-          issuer: https://login.microsoftonline.com/123456/v2.0
+          issuer: https://login.microsoftonline.com/8f31395c-0b8b-42b4-a967-7f095fd45176/v2.0
           clientID: 123
           clientSecret: 123
           requestedIDTokenClaims:
