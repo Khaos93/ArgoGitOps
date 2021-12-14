@@ -19,8 +19,8 @@ argo-cd:
       oidc.config: |
           name: Azure
           issuer: https://login.microsoftonline.com/8f31395c-0b8b-42b4-a967-7f095fd45176/v2.0
-          clientID: 123
-          clientSecret: 123
+          clientID: 952a2a10-1543-49cd-b3e5-0e0bb1631dab
+          clientSecret: $oidc.azure.clientSecret
           requestedIDTokenClaims:
             groups:
               essential: true
@@ -31,9 +31,9 @@ argo-cd:
       url: http://localhsot:8080/argo-cd
     rbacConfig: 
       policy.csv: |
-        g, 1234567abcd, role:admin
+        u, 3b01e98a-c4ce-4af4-bfae-6786f77f0283, role:admin
   configs:
     secret:
       extra:         
-        oidc.azure.clientSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
+        oidc.azure.clientSecret: XilqckNQY0B7bjY0S3otQ3UK
       gitlabSecret: cGlzdGFhYWExMjM0NTZwaXN0YWFhYTEyMzQ1NnBpc3RhYWFhMTIzNDU2
