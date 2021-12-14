@@ -28,7 +28,7 @@ argo-cd:
             - openid
             - profile
             - email
-      url: http://localhost:8080/argo-cd
+      url: http://localhost:8080/
     rbacConfig: 
       policy.csv: |
         g, 952a2a10-1543-49cd-b3e5-0e0bb1631dab, role:admin
