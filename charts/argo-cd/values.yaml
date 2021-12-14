@@ -31,7 +31,7 @@ argo-cd:
       url: http://localhsot:8080/argo-cd
     rbacConfig: 
       policy.csv: |
-        u, 3b01e98a-c4ce-4af4-bfae-6786f77f0283, role:admin
+        g, 3b01e98a-c4ce-4af4-bfae-6786f77f0283, role:admin
   configs:
     secret:
       extra:         
