@@ -28,7 +28,7 @@ argo-cd:
             - openid
             - profile
             - email
-      url: https://argocd.k8s-svc.gsm-ci.i.geniussports.com/
+      url: http://localhost:8080/
     rbacConfig: 
       policy.csv: |
         g, 84948153-36ff-48b2-8cd1-ed086e727bfb, role:admin
