@@ -20,7 +20,7 @@ argo-cd:
           name: Azure
           issuer: https://login.microsoftonline.com/8f31395c-0b8b-42b4-a967-7f095fd45176/v2.0
           clientID: 952a2a10-1543-49cd-b3e5-0e0bb1631dab
-          clientSecret: vbp7Q~dR_QRAWqQNWFZQ_yr1vsEv4oOb2Zd9p
+          clientSecret: $oidc.azure.clientSecret
           requestedIDTokenClaims:
             groups:
               essential: true
@@ -28,7 +28,7 @@ argo-cd:
             - openid
             - profile
             - email
-      url: http://localhost:8080/
+      url: https://argocd.k8s-svc.gsm-ci.i.geniussports.com/
     rbacConfig: 
       policy.csv: |
         g, 84948153-36ff-48b2-8cd1-ed086e727bfb, role:admin
